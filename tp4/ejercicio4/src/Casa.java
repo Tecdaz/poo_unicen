@@ -1,34 +1,35 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Casa {
     private String nombre;
     private int capacidad;
     private ArrayList<Alumno> alumnos;
     private ArrayList<String> habilidadesRequeridas;
-    private ArrayList<Casa> enemistades;
 
-    public Casa(String nombre, int capacidad){
+
+    public Casa(String nombre, int capacidad) {
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.alumnos = new ArrayList<Alumno>();
         this.habilidadesRequeridas = new ArrayList<String>();
-        this.enemistades = new ArrayList<Casa>();
     }
-    public boolean esAceptado(Alumno alumno){
-        if(capacidad == alumnos.size()){
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public boolean esAceptado(Alumno alumno) {
+        if (capacidad == alumnos.size()) {
             return false;
         }
-        if (!(habilidadesRequeridas.containsAll(alumno.getHabilidades()))){
+        if(alumno.perteneceACasa()){
             return false;
         }
-        boolean tieneFamiliares = true;
-        for(Alumno familiar: alumno.getFamiliares()){
-
-        }
-    }
-    public void addAlumno(Alumno alumno){
+        return new HashSet<>(alumno.getCualidades()).containsAll(habilidadesRequeridas);
     }
 
-
-
+    public void addAlumno(Alumno alumno) {
+        alumnos.add(alumno);
+    }
 }
