@@ -4,11 +4,14 @@ public class Computadora extends ObjetoComparable{
     private Proceso procesoActivo;
     private int velocidad;
 
-    public Computadora(int id, Proceso procesoActivo, int velocidad) {
+    public Computadora(int id, int velocidad) {
         this.id = id;
-        this.procesoActivo = procesoActivo;
         this.velocidad = velocidad;
-        this.estaLibre = false;
+        this.estaLibre = true;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public boolean estaLibre() {
