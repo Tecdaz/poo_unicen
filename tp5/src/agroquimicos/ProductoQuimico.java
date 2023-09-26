@@ -30,4 +30,9 @@ public class ProductoQuimico{
         List<String> estadosPatologicosQuimico = getEstadosPatologicos();
         return (new HashSet<>(estadosPatologicosQuimico).containsAll(enfermedad.getEstadosPatologicos()));
     }
+
+    @Override
+    public String toString(){
+        return nombre;
+    }
 }
