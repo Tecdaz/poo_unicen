@@ -11,5 +11,5 @@ public abstract class ComparadorFicha {
     public int getLimite(){
         return limite;
     }
-    public abstract int filter(Ficha ficha);
+    public abstract boolean cumple(Ficha ficha);
 }
