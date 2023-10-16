@@ -7,7 +7,7 @@ public class ComparadorEspacio extends ComparadorFicha{
         super(limite);
     }
 
-    public int filter(Ficha ficha){
-        return (ficha.getEspacioOcupado() - getLimite());
+    public boolean filter(Ficha ficha){
+        return (ficha.getEspacioOcupado() > getLimite());
     }
 }

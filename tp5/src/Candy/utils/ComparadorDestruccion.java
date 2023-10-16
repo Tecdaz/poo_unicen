@@ -8,7 +8,7 @@ public class ComparadorDestruccion extends ComparadorFicha{
     }
 
     @Override
-    public int filter(Ficha ficha) {
-        return (ficha.getDestruccion() - getLimite());
+    public boolean filter(Ficha ficha) {
+        return (ficha.getDestruccion() > getLimite());
     }
 }

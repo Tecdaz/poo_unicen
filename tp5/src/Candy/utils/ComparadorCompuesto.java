@@ -13,9 +13,12 @@ public class ComparadorCompuesto extends ComparadorFicha {
     }
 
     @Override
-    public int filter(Ficha ficha) {
+    public boolean filter(Ficha ficha) {
         for (ComparadorFicha comparador: comparadores){
-            if()
+            if(!comparador.filter(ficha)){
+                return false;
+            }
         }
+        return true;
     }
 }
