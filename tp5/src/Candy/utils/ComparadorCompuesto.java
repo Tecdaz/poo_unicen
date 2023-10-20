@@ -5,15 +5,17 @@ import Candy.Ficha;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ComparadorCompuesto{
+public class ComparadorCompuesto extends ComparadorFicha {
     private List<ComparadorFicha> comparadores;
-    public ComparadorCompuesto(ArrayList<ComparadorFicha> comparadores){
+    public ComparadorCompuesto(int limite, ArrayList<ComparadorFicha> comparadores){
+        super(limite);
         this.comparadores = new ArrayList<>(comparadores);
     }
 
-    public boolean cumple(Ficha ficha) {
+    @Override
+    public boolean filter(Ficha ficha) {
         for (ComparadorFicha comparador: comparadores){
-            if(!comparador.cumple(ficha)){
+            if(!comparador.filter(ficha)){
                 return false;
             }
         }

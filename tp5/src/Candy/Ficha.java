@@ -28,4 +28,8 @@ public class Ficha {
     public int getDestruccion() {
         return destruccion;
     }
+
+    public String toString(){
+        return "Nombre: " + getNombre() + "\nFortaleza: " + getFortaleza() + "\nEspacio ocupado: " + getEspacioOcupado() + "\nDestruccion: " + getDestruccion();
+    }
 }
