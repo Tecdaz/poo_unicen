@@ -1,7 +1,7 @@
-package Model;
+package parcial2020.Model;
 
-import Utils.Translator;
-import Utils.TranslatorEnglish;
+import parcial2020.Utils.Translator;
+import parcial2020.Utils.TranslatorEnglish;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +19,9 @@ public class Paragraph extends Article{
         this.isMutable = value;
     }
 
+    public List<String> getContent(){
+        return new ArrayList<>(content);
+    }
     @Override
     public int cantWords() {
         return content.size();

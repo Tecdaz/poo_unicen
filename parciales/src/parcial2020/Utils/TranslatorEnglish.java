@@ -1,6 +1,4 @@
-package Utils;
-
-import Model.Paragraph;
+package parcial2020.Utils;
 
 import java.util.HashMap;
 

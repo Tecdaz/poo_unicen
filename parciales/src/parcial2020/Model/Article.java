@@ -1,7 +1,7 @@
-package Model;
+package parcial2020.Model;
 
-import Utils.Translator;
-import Utils.TranslatorEnglish;
+import parcial2020.Utils.Translator;
+import parcial2020.Utils.TranslatorEnglish;
 
 import java.util.ArrayList;
 import java.util.List;
